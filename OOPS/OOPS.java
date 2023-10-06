@@ -1,3 +1,4 @@
+package OOPS;
 class Employee{
     int id;
     int salary;
@@ -11,6 +12,18 @@ class Employee{
     public int getSalary(){
         return salary;
     }
+
+    public static void oop(){
+        System.out.println("I am a static method");
+        // System.out.println(getSalary());
+        Employee e1 = new Employee();
+        e1.name = "Harry";
+        e1.id = 12;
+        e1.salary = 34;
+        e1.printDetails();
+
+    }
+
 }
 
 public class OOPS {
@@ -35,6 +48,9 @@ public class OOPS {
 
         System.out.println(john.getSalary());
         System.out.println(john.salary);
+
+        // john.oop();
+        Employee.oop();
 
     }
 }

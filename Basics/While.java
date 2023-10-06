@@ -1,3 +1,4 @@
+package Basics;
 public class While {
     public static void main(String[] args) {
         System.out.println("Using Loops:");
