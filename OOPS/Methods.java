@@ -1,4 +1,4 @@
-package OOPS;
+
 public class Methods {
 
     int sum(int a, int b) {

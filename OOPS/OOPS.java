@@ -1,4 +1,4 @@
-package OOPS;
+
 class Employee{
     int id;
     int salary;

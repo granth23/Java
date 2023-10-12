@@ -1,4 +1,4 @@
-package Basics;
+
 public class DoWhile {
     public static void main(String[] args) {
 

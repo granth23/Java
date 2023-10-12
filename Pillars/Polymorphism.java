@@ -1,4 +1,4 @@
-package Pillars;
+
 class Helper {
 	static int Multiply(int a, int b)
 	{

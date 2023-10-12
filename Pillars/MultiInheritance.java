@@ -1,4 +1,4 @@
-package Pillars;
+
 interface Parent1 {
     default void fun() {
         System.out.println("Parent1");
