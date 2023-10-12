@@ -1,5 +1,6 @@
-package Collections;
 import java.util.*;
+
+// LIFO
 
 public class Stacks {
 
