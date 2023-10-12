@@ -1,12 +1,16 @@
 import java.util.*;
 
-class ArrayLists {
-	public static void main(String[] args){
-		int n = 5;
+// Main class
+public class LinkedLists {
 
-		ArrayList<Integer> arr = new ArrayList<Integer>();
+    // Driver code
+    public static void main(String args[])
+    {
+        int n = 5;
 
-		for (int i = 1; i <= n; i++) {
+        List<Integer> arr = new LinkedList<>();
+
+        for (int i = 1; i <= n; i++) {
 			arr.add(i);
 		}
 
@@ -14,6 +18,7 @@ class ArrayLists {
 
 		System.out.println("Array: " + arr);
         System.out.println("Array's Third Element: " + arr.get(2));
+        System.out.println("Array's Index of Element 10: " + arr.indexOf(10));
 
         arr.remove(2);
 
@@ -26,11 +31,5 @@ class ArrayLists {
         System.out.println("Array contains 2? " + arr.contains(2));
         System.out.println("Array contains 10? " + arr.size());
 
-        Iterator<Integer> itr = arr.iterator();
-
-        while(itr.hasNext()){
-            System.out.println(itr.next());
-        }
-
-	}
+    }
 }

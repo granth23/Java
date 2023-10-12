@@ -4,19 +4,19 @@ class Person {
     private int age;
 
     public String getName() {
-        return name;
+        return name; // Getter
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name; // Setter
     }
 
     public int getAge() {
-        return age;
+        return age; // Getter
     }
 
     public void setAge(int age) {
-        this.age = age;
+        this.age = age; // Setter
     }
 
 }

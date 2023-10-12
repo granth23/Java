@@ -1,8 +1,10 @@
 import java.util.*;
 
-public class Sets {
-    public static void main(String[] args){
-        Set<Integer> set = new HashSet<Integer>();
+// Its nothing different but a sorted set
+
+public class TreeSets {
+    public static void main(String[] args) {
+        Set<Integer> set = new TreeSet<>();
 
         set.add(20);
         set.add(10);
@@ -17,7 +19,7 @@ public class Sets {
         System.out.println(set.contains(30));
 
         System.out.println(set.size());
+        System.out.println(set.isEmpty());
 
-        // set.clear();
     }
 }

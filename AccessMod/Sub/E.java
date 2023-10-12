@@ -1,4 +1,4 @@
-package Sub;
+
 
 public class E extends A {
     public void abc(){

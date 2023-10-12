@@ -12,6 +12,9 @@ public class Input {
         System.out.println("Name: " + str);
         System.out.println("Age: " + a);
 
+        int bruh = sc.nextInt();
+        System.out.println("BRUH: " + bruh);
+
         sc.close();
     }
 }

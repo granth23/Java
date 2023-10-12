@@ -1,4 +1,4 @@
-package Sub;
+
 
 public class A {
     public int a;

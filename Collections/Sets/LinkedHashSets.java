@@ -4,7 +4,7 @@ import java.util.*;
 
 public class LinkedHashSets {
     public static void main(String[] args){
-        Set<Integer> set = new LinkedHashSet<Integer>();
+        Set<Integer> set = new LinkedHashSet<>();
 
         set.add(20);
         set.add(10);
