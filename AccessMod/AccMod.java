@@ -15,6 +15,11 @@ class C {
         this.a = 10;
         this.b = 20;
     }
+
+    int priv(){
+        xyz();
+        return this.a;
+    }
 }
 
 class D extends C{
@@ -61,6 +66,7 @@ public class AccMod{
         System.out.println(d.a); // This will work as a is public
         // System.out.println(d.b); // This will give error as b is private
         System.out.println(d.c); // This will work as c is protected
+        System.out.println(d.priv()); // This will work as priv is default
 
         System.out.println("E");
         E e = new E();
