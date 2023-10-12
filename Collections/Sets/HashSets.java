@@ -2,22 +2,18 @@ import java.util.*;
 
 public class HashSets {
     public static void main(String[] args){
-        Set<Integer> set = new HashSet<>();
+        Set<Students> set = new HashSet<>();
 
-        set.add(20);
-        set.add(10);
-        set.add(30);
-        set.add(25);
-        set.add(20);
+        set.add(new Students(2, "B"));
+        set.add(new Students(1, "A"));
+        set.add(new Students(3, "C"));
+        set.add(new Students(4, "D"));
 
         System.out.println(set);
 
-        set.remove(10);
+        set.add(new Students(1, "A"));
 
-        System.out.println(set.contains(30));
-
-        System.out.println(set.size());
-        System.out.println(set.isEmpty());
+        System.out.println(set);
 
         // set.clear();
     }
