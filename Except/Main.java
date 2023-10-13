@@ -1,22 +1,22 @@
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String str) {
+        super(str);
+    }
+}
+
 public class Main {
-    public static void main(String[] args) {
 
-        int a = 0;
-        int b = 0;
-
+    public static void main(String args[]) throws InvalidAgeException {
         try {
-            b = 100 / a;
-            System.out.println("b = " + b);
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
-        int nums[] = new int[5];
-
-        try {
-            System.out.println("nums[5] = " + nums[5]);
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+            int age = Integer.parseInt(args[0]);
+            if (age < 18) {
+                throw new InvalidAgeException("age is not valid to vote");
+            } else {
+                System.out.println("welcome to vote");
+            }
+        } catch (InvalidAgeException ex) {
+            System.out.println("Caught the exception");
+            System.out.println("Exception occured: " + ex);
         }
     }
 }

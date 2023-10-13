@@ -16,13 +16,16 @@ class ArrayLists {
         System.out.println("Array's Third Element: " + arr.get(2));
 
         arr.remove(2);
+        System.out.println("Array: " + arr);
 
-        arr.remove(Integer.valueOf(3));
+        arr.set(2, 10);
+        System.out.println("Array: " + arr);
+
+        arr.remove(Integer.valueOf(2));
         System.out.println("Array: " + arr);
 
         // arr.clear()
 
-        arr.set(2, 10);
         System.out.println("Array contains 2? " + arr.contains(2));
         System.out.println("Array contains 10? " + arr.size());
 

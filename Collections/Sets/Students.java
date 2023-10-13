@@ -22,6 +22,6 @@ class Students implements Comparable<Students>{
     }
 
     public int compareTo(Students s){
-        return this.rollno - s.rollno;
+        return this.hashCode() - s.hashCode();
     }
 }
