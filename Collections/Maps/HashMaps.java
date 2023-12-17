@@ -9,6 +9,8 @@ public class HashMaps {
         map.put(3, "Chirag");
         map.put(1, "Gaurang");
 
+        Set<Map.Entry<Integer, String>> entries = map.entrySet();
+
         System.out.println(map);
 
         // set.clear();

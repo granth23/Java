@@ -1,0 +1,3 @@
+John 100
+Mary 200
+Jane 300

@@ -12,10 +12,10 @@ class Students implements Comparable<Students>{
         return "Roll No: " + this.rollno + " Name: " + this.name;
     }
 
-    public boolean equals(Object obj){
-        Students s = (Students) obj;
-        return this.rollno == s.rollno;
-    }
+    // public boolean equals(Object obj){
+    //     Students s = (Students) obj;
+    //     return this.rollno == s.rollno;
+    // }
 
     public int hashCode(){
         return rollno;

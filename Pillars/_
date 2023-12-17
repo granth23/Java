@@ -1,0 +1,17 @@
+Abstraction is Java is used to hide certain details and only show the important details of the object. In other words, it deals with the outside view of an object (interface). It has a lot of methods, but you don't need to know how they work, you just need to know what they do. The implementation of the interface is hidden from you.
+
+Abstract Method is one that is declared, but not implemented. It is used to force the subclass to implement it.
+
+Encapsulation is the process of wrapping code and data together into a single unit. It is used to hide the values or state of a structured data object inside a class, preventing unauthorized parties' direct access to them.
+
+Inheritance is the process where one class acquires the properties (methods and fields) of another. It is used for code reusability and method overriding.
+
+Interface is a blueprint of a class. It has static constants and abstract methods. The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+Polymorphism is the ability of an object to take on many forms. It is used to abstract an action or use common interface for classes that share similar logic.
+
+Method Overloading is when two or more methods in the same class have the same name but different parameters. It is used to add more to the behavior of methods and there is no need of more than one class if method overloading is used.
+
+Method Overriding is when a subclass has the same method with the same name and exactly the same number and type of parameters and same return type as a method in its superclass. It is used to provide the specific implementation of the method that is already provided by its super class.
+
+Multiple Inheritance is when a class can inherit characteristics and behavior from more than one parent class. It is used to reuse the code and there is no need to write the same code again.

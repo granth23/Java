@@ -1,0 +1,40 @@
+Socket-Based Communication
+Sockets se hum ek tarike se 2-way communication karte hai.
+Sockets ek endpoint hai jaha se data send aur receive hota hai.
+Sockets ek IP address aur port number se identify kiye jaate hai.
+
+Remote Method Invocation (RMI)
+If you can make the person on the other end do some work for you it would be great.
+RMI ek aisi cheez hai jisse tum dusre bande ke objects ko use kar sakte ho.
+You write your own functions and they can be triggered on the device of someone else.
+
+Difference between Socket and RMI
+Socket ek low-level communication API hai jabki RMI ek high-level communication API hai.
+Socket ek IP address aur port number se identify kiya jaata hai jabki RMI ek remote object reference se identify kiya jaata hai.
+Socket ek byte stream provide karta hai jabki RMI ek object stream provide karta hai.
+
+Server Socket
+ServerSocket client ke request ko accept karne ke liye use hota hai.
+
+Client Socket
+ClientSocket server ke sath communication karne ke liye use hota hai.
+ClientSocket server ko data bhejta aur usse data receive karta hai.
+
+Port
+Port ek logical connection hai jiska use client aur server ke beech communication ke liye kiya jaata hai.
+It is used to listen the request of the clients.
+Port number 16-bit unsigned integer hai jiska value 0 se 65565 tak hota hai.
+
+Backlog
+Backlog ek queue hai jisme clients wait karte hai.
+Backlog ka default value 50 hota hai.
+
+Methods of ServerSocket class
+accept() method
+accept() method client ke request ko accept karne ke liye use hota hai.
+The moment it receives a request from the client, it returns the object of ClientSocket.
+
+stops() method
+stops() method server ko request accept karna band karne ke liye use hota hai.
+
+

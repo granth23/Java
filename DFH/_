@@ -1,0 +1,13 @@
+Data file handling in java for Text files
+
+Java harr file ko ek stream of bytes ki tarah dekhta hai
+Harr OS file ke end ko identify karne ke liye ya toh EOF use karta hai ya total size of file.
+
+File streams are used to perform input and output operations on a file.
+
+Streams input and output operations are performed in a sequential order.
+Streams inputing and outputing bytes are known as byte-based streams.
+Streams inputing and outputing characters are known as character-based streams.
+
+Byte based streams are used to perform input and output operations on Binary files.
+Character based streams are used to perform input and output operations on Text files.

@@ -9,6 +9,10 @@ abstract class Sunstar {
         System.out.println(this.num);
     }
 
+    final static void prinnnn(){
+        System.out.println("cdhcd");
+    }
+
     // Abstract method (does not have a body)
     abstract void printInfo();
 }
@@ -21,8 +25,7 @@ class Employee extends Sunstar {
         System.out.println("This is a constructor");
     }
 
-    void printInfo()
-    {
+    void printInfo() {
         String name = "avinash";
         int age = 21;
         float salary = 222.2F;
@@ -39,5 +42,6 @@ class Abstraction {
     {
         Sunstar s = new Employee();
         s.printInfo();
+        Sunstar.prinnnn();
     }
 }

@@ -1,0 +1,147 @@
+New
+Pehle ek thread ko instantiate karte ho using the threads class
+ya firr runnable ke saath and uske baad hi vo start ho sakta hai
+
+Runnable
+Firr start karne ke time pe vo thread scheduler mein uss thread
+ko daal deta hai and usko run karne ke liye ready kar deta hai
+
+Running
+Jab scheduler uss thread ko select karta hai toh vo running state
+mein aa jaata hai
+
+Non Runnable
+Non Runnable vo state hai jisme thread ko kuch bhi nahi karna hota
+
+Terminated
+Run method ka kaam khatam ho jaane ke baad vo terminated state mein
+aa jaata hai
+
+Implementing Threading
+Java mein threads ke liye 2 tareeke hai ek toh threads class ke saath
+aur dusra runnable ke saath aur runnable ke saath use karne mein
+advantage ye hai ki hum multiple inheritance use kar sakte hai
+
+Life Cycle of a Thread
+Ek Life cycle of a thread jaisi cheez hoti hai jisme hum ek thread ke
+respect mein baat karte hai, jab ek chal raha hai aur agar usse wait
+karne bol diya toh jab tak uska time khatam nahi hota vo wait karega
+yaa fir agar usse notify kara gaya ho tab tak vo wait karega
+Join method ke saath bhi ye hota hai ki jab tak usse join nahi kara
+tab tak vo wait karega aur agar vo galti se interrupt ho jaye tab
+vo sleep mode mein chala jayega aur agar usse interrupt kara gaya
+ho tab vo terminate ho jayega aur agar usse suspend kara gaya ho
+tab vo non runnable state mein chala jayega aur agar usse resume
+kara gaya ho tab vo running state mein chala jayega.
+
+Synchronization
+Jab hum multiple threads ko ek saath run karate hai toh vo ek dusre
+ko disturb kar sakte hai aur isse hume kuch problems ho sakti hai
+jaise ki agar hum ek bank mein multiple threads ko ek saath run kare
+to withdraw some amount and ek aur thread same cheez kare dono ko
+ek saath run karne pe vo ek saath withdraw kar sakte hai aur isse
+humare paas negative balance aa sakta hai isliye hume isse bachna
+jaruri hai aur iske liye hum synchronization ka use karte hai
+
+Atomic Operations
+Atomic Operations ek aise operations hai jisme hum ek thread ko
+ek saath run karate hai aur isse hume kuch problems nahi hoti hai
+cause vo pehle se synchronized hote hai.
+
+Critical Region
+Critical Region ek aisa region hota hai jisme hume synchronization
+ki jarurat hoti hai.
+
+**Ek vo randomization hai do threads ko ek saath run karne ke liye
+vo sleep mein different time ki wajah se hota hai.**
+
+Locks
+Locks ka use hum synchronization mein karte hai jaise ki agar
+humne ek thread ko lock diya hai toh dusra thread usse access
+nahi kar sakta hai aur jab tak vo lock nahi karta tab tak vo
+wait karega aur jab lock khulega tab vo access kar payega
+
+Bounded Queue
+Bounded queue mein hum ek array ka use karte hai jisme hum
+front aur rear pointers ka use karte hai aur jab hum koi
+element insert karte hai toh rear pointer badhta hai aur
+jab hum koi element delete karte hai toh front pointer
+badhta hai aur jab front aur rear pointer same ho jate
+hai toh queue full ho jata hai aur jab front pointer
+rear pointer ke aage aa jata hai toh queue empty ho jata hai
+
+Producer Consumer Problem
+Producer Consumer Problem mein producer ek thread hota hai
+jo data produce karta hai aur consumer ek thread hota hai
+jo data consume karta hai aur producer consumer problem
+ka solution bounded queue hai jisme producer data produce
+karta hai aur consumer data consume karta hai.
+
+Cooperating Threads
+Cooperating threads mein hum ek thread ko notify karte hai
+aur dusra thread usse wait karta hai aur jab tak usse notify
+nahi kara tab tak vo wait karta hai aur jab usse notify kara
+tab vo running state mein chala jata hai.
+
+wait() notify() notifyAll()
+wait() method ko hum thread ko wait karne ke liye use karte hai
+aur notify() method ko hum kisi bhi ek thread ko notify karne ke
+liye use karte hai aur notifyAll() method ko hum multiple threads
+ko notify karne ke liye use karte hai.
+
+Starvation
+Starvation ek situation hoti hai jisme ek thread ko continuously
+execute karte rehte hai and dusre thread ko execute hone ka time
+hi nahi milta. Same priority level wale threads mein bhi ye
+situation aa sakti hai.
+
+Dormacy
+Dormacy ek situation hoti hai jisme ek thread ko wait karaya
+jata hai aur usse kabhi notify/uthaya nahi jata aur isse
+uska kaam nahi hota hai aur isse hum kaise solve karte hai
+iske liye hume notifyAll() method ka use karna hota hai.
+
+Deadlock
+Deadlock ek situation hoti hai jisme ek thread dusre thread
+pe depend karta hai aur dusra thread pehle thread pe depend
+karta hai aur isse dono thread ek dusre ko wait karate hai
+kyuki lock ek time pe ek hi thread ko milta hai aur isse
+
+Premature Termination
+Premature Termination ek situation hoti hai jisme ek thread
+ko terminate kar diya jata hai aur isse uska kaam nahi hota
+hai aur isse hum kaise solve karte hai iske liye hume
+notifyAll() method ka use karna hota hai.
+
+java.util.concurrent
+java.util.concurrent package mein hume kuch classes milti hai
+jaise ki ExecutorService, Executors, Callable, Future, FutureTask
+ExecutorService ek interface hai jisme hume kuch methods milti hai
+jaise ki execute(), submit(), shutdown(), shutdownNow()
+Executors ek class hai jisme hume kuch methods milti hai jaise ki
+newSingleThreadExecutor(), newFixedThreadPool(), newCachedThreadPool()
+Callable ek interface hai jisme hume ek method milti hai jiska name
+hai call() aur iska return type hai V
+Future ek interface hai jisme hume kuch methods milti hai jaise ki
+cancel(), isCancelled(), isDone(), get()
+FutureTask ek class hai jisme hume kuch methods milti hai jaise ki
+cancel(), isCancelled(), isDone(), get()
+
+Executors
+Executors ek group of threads hota hai jisko hum ek random order mein
+execute karwa sakte hai. Isko implement karne ke liye hum log
+anExecutor.execute(aRunnable) ye use karte hai. Iske 4 types hai mainly
+SingleThread, FixedThread, CachePool, ScheduledPool.
+
+Single mein ek hi thread exist karta hai.
+Fixed mein n number of threads exist karte hai.
+Cached resizable hota hai so any number of threads.
+Scheduled mein time delay exist karta hai.
+
+Agar kisi executor se return lena hai toh uspe Callable implement
+karte hai. Isse ek Future object return hota hai jisko get se
+access kar sakte hai.
+
+Semaphore in literal terms is a value if 1 a thread can access the object
+if it is 0 threads gotta wait outside to get a signal. Wait is represented
+with a P and Signal is represented with a V
